@@ -49,6 +49,7 @@ namespace BethanysPieShop
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession(); 
 
             app.UseEndpoints(endpoints =>
             {
