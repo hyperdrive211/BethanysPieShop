@@ -14,6 +14,12 @@ namespace BethanysPieShop.Controllers
         private readonly IPieRepository _pieRepository;
         private readonly ShoppingCart _shoppingCart;
 
+        public ShoppingCartController(IPieRepository pieRepository, ShoppingCart shoppingCart)
+        {
+            _pieRepository = pieRepository;
+            _shoppingCart = shoppingCart;
+        }
+
         public ViewResult Index()
         {
             var items = _shoppingCart.GetShoppingCartItems();
