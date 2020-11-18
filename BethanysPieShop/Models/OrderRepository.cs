@@ -24,6 +24,7 @@ namespace BethanysPieShop.Models
             var shoppingCartItems = _shoppingCart.ShoppingCartItems;
             order.OrderTotal = _shoppingCart.GetShoppingCartTotal();
 
+            order.OrderDetails = new List<OrderDetail>();
             foreach (var shoppingCartItem in shoppingCartItems)
             {
                 var orderDetail = new OrderDetail

@@ -19,6 +19,13 @@ namespace BethanysPieShop.Controllers
             _shoppingCart = shoppingCart; 
         }
 
+        //GET: /<controller>/ 
+
+        public IActionResult Checkout() 
+        {
+            return View(); 
+        }
+
         [HttpPost]
         public IActionResult Checkout(Order order)
         {
