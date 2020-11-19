@@ -47,11 +47,13 @@ namespace BethanysPieShop
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSession(); 
+            app.UseSession();
 
+            app.UseRouting();
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
